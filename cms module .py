@@ -55,3 +55,12 @@ def update_contact():
             print("Contact updated successfully!")
             return
     print("Contact not found.")
+
+def delete_contact():
+    phone = input("Enter Phone of the Contact to Delete: ")
+    for contact in contacts:
+        if contact["phone"] == phone:
+            contacts.remove(contact)
+            print("Contact deleted successfully!")
+            return
+    print("Contact not found.")
